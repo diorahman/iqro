@@ -1,10 +1,10 @@
 {
   "name": "iqro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Listen to quran from cli.",
   "main": "index.js",
   "bin": {
-    "iqro": "iqro.js"
+    "iqro": "bin/iqro.js"
   },
   "dependencies": {
     "player": "^0.5.0",
