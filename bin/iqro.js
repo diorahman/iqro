@@ -12,11 +12,13 @@ var surahs = argv._.filter(function(surah) {
 }).map(function(surah) {
   return ROOT + '/' + zeroPad(surah, 3) + '.mp3';
 });
-console.log(surahs);
 var player = new Player(surahs);
 player.on('playing', function(item){
   console.log('-> ', item._name.split('.')[0]);
 })
+player.on('error', function(){
+  // not yet handled
+});
 player.play();
 console.log('Downloading file...');
 
