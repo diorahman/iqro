@@ -17,5 +17,5 @@ player.on('playing', function(item){
   console.log('-> ', item._name.split('.')[0]);
 })
 player.play();
-console.log('...');
+console.log('Downloading file...');
 
