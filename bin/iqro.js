@@ -7,11 +7,12 @@ function zeroPad(num, places) {
 }
 var argv = require('minimist')(process.argv.slice(2));
 var surahs = argv._.filter(function(surah) {
-  if (parseInt(surah) != NaN && surah <= 144 && surah >= 1)
+  if (parseInt(surah) != NaN && surah <= 114 && surah >= 1)
     return true;
 }).map(function(surah) {
   return ROOT + '/' + zeroPad(surah, 3) + '.mp3';
 });
+console.log(surahs);
 var player = new Player(surahs);
 player.on('playing', function(item){
   console.log('-> ', item._name.split('.')[0]);
